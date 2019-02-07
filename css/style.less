@@ -1,0 +1,234 @@
+// Variables
+
+@full-width: 100%;
+@base-padding: 15px;
+@base-margin: 15px;
+@base-border-radius: 3px;
+@base-font-size: 24px;
+@base-font-family: pt sans narrow, verdana;
+@base-project-height: 300px;
+@large-project-height: 400px;
+
+
+// Media Queries
+
+@for-tablet-down: ~"(max-width: 768px)";
+@for-desktop-down: ~"(max-width: 824px)";
+
+@for-desktop-up: ~"(min-width: 1100px)";
+@for-big-desktop-up: ~"(min-width: 1700px)";
+
+// Colours
+
+@white: #fff;
+@base-pink: #ad054a;
+@transparent-base-pink: rgba(173, 5, 74, 0.95);
+@grey: #ccc;
+
+// Styling
+
+body {
+    width: @full-width;
+    margin: 0;
+}
+
+.hero {
+    width: @full-width;
+    height: 100vh;
+    background-image: url(../img/self--image.jpg);
+    position: relative;
+    background-attachment: fixed;
+    background-size: cover;
+    margin-bottom: 100px;
+    background-position: calc(100%) 20%;
+
+    @media @for-tablet-down {
+        background-position: center;
+    }
+
+    &__img {
+        position: absolute;
+        width: 40%;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%);
+        z-index: 1;
+        opacity: 0.8;
+
+        @media @for-tablet-down {
+            width: 80%;
+        }
+    }
+
+    &__chevron {
+        position: absolute;
+        width: 30px;
+        z-index: 1;
+        bottom: 5%;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    &__gradient {
+        background: linear-gradient(to right, #ad054a 0%, #790443 100%);
+        width: @full-width;
+        height: 100vh;
+        opacity: 0.8;
+    }
+}
+
+.heading {
+    text-align: center;
+    font-family: @base-font-family;
+    font-size: @base-font-size;
+    margin: @base-margin*2;
+
+    &__tagline--bold {
+        font-weight: bold;
+    }
+
+    &__role {
+        margin-bottom: 100px;
+    }
+}
+
+.separator {
+    width: 40px;
+    height: 1px;
+    border: 2px solid @base-pink;
+    background-color: @base-pink;
+    margin: 0 auto;
+    clear: both;
+}
+
+.title {
+    font-family: noteworthy, verdana;
+    font-size: @base-font-size + 4;
+    font-weight: bold;
+    text-align: center;
+    color: @base-pink;
+}
+
+.project {
+    width: 70%;
+    height: @base-project-height;
+    padding: @base-padding;
+    box-sizing: content-box;
+    margin: 35px auto 65px auto;
+    padding: @base-padding;
+    position: relative;
+
+    @media @for-tablet-down {
+        width: @full-width - 10;
+    }
+
+    @media @for-desktop-down {
+        height: auto;
+    }
+
+    @media @for-desktop-up {
+        width: 60%;
+        height: @large-project-height;
+    }
+
+    &__image-container {
+        max-width: 80%;
+        top: 50%;
+        transform: translateY(-50%);
+        position: relative;
+
+
+        @media @for-desktop-down {
+            max-width: @full-width;
+            top: auto;
+            transform: none;
+            position: static;
+        }        
+
+        &--left{
+            float: left;
+        }
+
+        &--right {
+            float: right;
+        }
+    }
+
+    &__image {
+        max-width: 100%;
+        max-height: @base-project-height;
+        border-radius: @base-border-radius;
+        box-sizing: border-box;
+
+        @media @for-desktop-down {
+            max-height: fit-content;
+        }
+
+        @media @for-desktop-up {
+            max-height: @large-project-height;
+        }
+    }
+
+    &__image-link {
+        display: block;
+    }
+
+    &__text {
+        width: 40%;
+        border: 1px solid @base-pink;
+        border-radius: @base-border-radius;
+        overflow: hidden;
+        position: absolute;
+        top: 15%;
+        background: @transparent-base-pink;
+        text-align: center;
+        color: @white;
+        font-family: @base-font-family;
+        padding: @base-padding;
+        font-size: @base-font-size - 6;
+        display: block;
+
+        @media @for-desktop-down {
+            position: static;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        &--left {
+            left: 65%;
+
+            @media @for-big-desktop-up {
+                left: 50%;
+            }
+        }
+
+        &--right {
+            right: 65%;
+
+            @media @for-big-desktop-up {
+                right: 50%;
+            }
+        }
+    }
+
+    &__title {
+        font-family: @base-font-family;
+        font-weight: bold;
+        display: block;
+        font-size: @base-font-size - 4;
+        text-decoration: underline;
+        padding-bottom: @base-padding;
+    }
+
+    &__link {
+        display: block;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        padding-top: @base-padding;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
