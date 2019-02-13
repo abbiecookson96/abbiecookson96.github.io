@@ -2,6 +2,9 @@ body {
   width: 100%;
   margin: 0;
 }
+body.safari .hero {
+  background-image: none;
+}
 .hero {
   width: 100%;
   height: 100vh;
