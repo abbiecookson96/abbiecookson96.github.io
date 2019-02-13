@@ -2,8 +2,10 @@ body {
   width: 100%;
   margin: 0;
 }
-body.safari .hero {
-  background-image: none;
+@media (max-width: 768px) {
+  body.safari .hero {
+    background-image: none;
+  }
 }
 .hero {
   width: 100%;
