@@ -32,8 +32,14 @@ body {
     margin: 0;
 }
 
-body.safari .hero {
-    background-image: none;
+// safari
+
+@media not all and (min-resolution:.001dpcm) { 
+    @media {
+        .safari-only {
+            background-image: none;
+        }
+    } 
 }
 
 .hero {
