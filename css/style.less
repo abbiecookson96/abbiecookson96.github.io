@@ -4,10 +4,15 @@
 @base-padding: 15px;
 @base-margin: 15px;
 @base-border-radius: 3px;
-@base-font-size: 24px;
+@base-font-size: 18px;
 @base-font-family: pt sans narrow, verdana;
 @base-project-height: 300px;
 @large-project-height: 400px;
+
+// Z-Indexes
+
+@hero-image-z-index: 1;
+@header-z-index: 2;
 
 
 // Media Queries
@@ -21,11 +26,17 @@
 // Colours
 
 @white: #fff;
+@black: #000;
+@grey: #ccc;
 @base-pink: #ad054a;
 @transparent-base-pink: rgba(173, 5, 74, 0.95);
-@grey: #ccc;
+
 
 // Styling
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     width: @full-width;
@@ -39,6 +50,38 @@ body.safari .hero {
     }
 }
 
+.header {
+    overflow: hidden;
+    position: absolute;
+    z-index: @header-z-index;
+    top: @base-padding;
+    right: @base-padding;
+    font-family: @base-font-family;
+    font-size: @base-font-size;
+
+    &__nav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    &__nav-item {
+        float: left;
+    }
+
+    &__nav-link {
+        display: block;
+        padding: @base-padding;
+        color: @white;
+        text-decoration: none;
+
+        &:hover {
+            color: pink;
+        }
+    }
+}
+
 .hero {
     width: @full-width;
     height: 100vh;
@@ -46,7 +89,7 @@ body.safari .hero {
     position: relative;
     background-attachment: fixed;
     background-size: cover;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     background-position: calc(100%) 20%;
 
     @media @for-tablet-down {
@@ -59,7 +102,7 @@ body.safari .hero {
         top: 40%;
         left: 50%;
         transform: translate(-50%);
-        z-index: 1;
+        z-index: @hero-image-z-index;
         opacity: 0.8;
 
         @media @for-tablet-down {
@@ -84,14 +127,16 @@ body.safari .hero {
     }
 }
 
-.heading {
+.about {
     text-align: center;
     font-family: @base-font-family;
-    font-size: @base-font-size;
-    margin: @base-margin*2;
+    font-size: 24px;
+    margin: 0 @base-margin*2 @base-margin*2 @base-margin*2;
+    padding-top: @base-margin*2;
 
-    &__tagline--bold {
+    &__tagline {
         font-weight: bold;
+        margin-top: 0px;
     }
 
     &__role {
@@ -109,11 +154,13 @@ body.safari .hero {
 }
 
 .title {
-    font-family: handlee, verdana;
-    font-size: @base-font-size + 4;
+    font-family: @base-font-family, verdana;
+    font-size: 28px;
     font-weight: bold;
     text-align: center;
     color: @base-pink;
+    margin-top: 0;
+    padding-top: 30px;
 }
 
 .project {
@@ -192,7 +239,7 @@ body.safari .hero {
         color: @white;
         font-family: @base-font-family;
         padding: @base-padding;
-        font-size: @base-font-size - 6;
+        font-size: @base-font-size;
         display: block;
 
         @media @for-desktop-down {
@@ -222,7 +269,7 @@ body.safari .hero {
         font-family: @base-font-family;
         font-weight: bold;
         display: block;
-        font-size: @base-font-size - 4;
+        font-size: @base-font-size + 2;
         text-decoration: underline;
         padding-bottom: @base-padding;
     }
@@ -237,5 +284,57 @@ body.safari .hero {
         &:hover {
             text-decoration: underline;
         }
+    }
+}
+
+.contact {
+    font-family: @base-font-family;
+    font-size: @base-font-size;
+}
+
+.footer {
+    padding: 15px;
+    overflow: hidden;
+    height: 40px;
+
+    &__name {
+        width: 30%;
+        float: left;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+
+        p {
+            margin: 0;
+            font-family: @base-font-family;
+            font-size: @base-font-size;
+            color: lighten(@black,50%);
+        }
+    }
+
+    &__social {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 70%;
+        float: right;
+        text-align: right;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &__social-item {
+        display: inline-block;
+        width: 25px;
+        margin: 0 @base-margin;
+    }
+
+    &__social-link {
+        display: block;
+    }
+
+    &__social-icon {
+        vertical-align: middle;
     }
 }

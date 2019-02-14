@@ -10,18 +10,26 @@
         <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow|Handlee" rel="stylesheet">
     </head>
     <body>
-        <div class="hero">
+        <div class="header">
+            <ul class="header__nav">
+              <li class="header__nav-item"><a href="#home" class="header__nav-link">Home</a></li>
+              <li class="header__nav-item"><a href="#about" class="header__nav-link">About</a></li>
+              <li class="header__nav-item"><a href="#work" class="header__nav-link">Work</a></li>
+              <li class="header__nav-item"><a href="mailto: a-cookson@hotmail.com" class="header__nav-link">Contact</a></li>
+            </ul>
+        </div>
+        <div class="hero" id="home">
             <img class="hero__img" src="img/hero-logo.png" alt="Abbie Cookson Front-end Developer">
-            <img class="hero__chevron" src="img/chevron-down.svg" alt="chevron down">
+            <a href="#about"><img class="hero__chevron" src="img/chevron-down.svg" alt="chevron down"></a>
             <div class="hero__gradient">
             </div>
         </div>
-        <div class="heading">
-            <p class="heading__tagline heading__tagline--bold">Build a website that works.</p>
-            <p class="heading__role">Front-end Developer &amp; UX Designer based in Pontefract, West Yorkshire.</p>
+        <div class="about" id="about">
+            <p class="about__tagline">Build a website that works.</p>
+            <p class="about__role">Front-end Developer &amp; UX Designer based in Pontefract, West Yorkshire.</p>
         </div>
         <div class="separator"></div>
-        <p class="title">Previous Projects</p>
+        <p class="title" id="work">Previous Projects</p>
         <div class="separator"></div>
         <div class="project">
             <div class="project__image-container project__image-container--left">
@@ -37,11 +45,12 @@
         </div>
         <div class="project">
             <div class="project__image-container project__image-container--right">
-                <img class="project__image" src="./img/brew-tea-rooms.png" alt="Prime Holidays project">
+                <img class="project__image" src="./img/student-union.png" alt="Prime Holidays project">
             </div>
             <div class="project__text project__text--right">
                 <span class="project__title">UX/ UI Design</span>
-                Brew Tea Rooms. A fully responsive website redesign for a local cafe, to enhance the user experience. Built using Adobe Photoshop and Adobe Illustrator.
+                Huddersfield Student Union. A student union application fully designed for the University of Huddersfield. Built using Adobe Photoshop and Adobe Illustrator.
+                <a class="project__link" href="https://marvelapp.com/222ca6c/screen/27512198" target="_blank">View more</a>
             </div>
         </div>
         <div class="project">
@@ -79,13 +88,23 @@
         </div>
         <div class="project">
             <div class="project__image-container project__image-container--right">
-                <img class="project__image" src="./img/student-union.png" alt="Prime Holidays project">
+                <img class="project__image" src="./img/brew-tea-rooms.png" alt="Prime Holidays project">
             </div>
             <div class="project__text project__text--right">
                 <span class="project__title">UX/ UI Design</span>
-                Huddersfield Student Union. A student union application fully designed for the University of Huddersfield. Built using Adobe Photoshop and Adobe Illustrator.
-                <a class="project__link" href="https://marvelapp.com/222ca6c/screen/27512198" target="_blank">View more</a>
+                Brew Tea Rooms. A fully responsive website redesign for a local cafe, to enhance the user experience. Built using Adobe Photoshop and Adobe Illustrator.
             </div>
+        </div>
+        <div class="footer">
+            <div class="footer__name">
+                <p>&copy; Abbie Cookson 2019 </p>
+            </div>
+            <ul class="footer__social">
+                <li class="footer__social-item"><a href="mailto: a-cookson@hotmail.com" class="footer__social-link"><img class="footer__social-icon" src='img/social__email.svg' /></a></li>
+                <li class="footer__social-item"><a href="https://www.linkedin.com/in/abbiecookson" class="footer__social-link" target="_blank"><img class="footer__social-icon" src='img/social__linkedin.svg' /></a></li>
+                <li class="footer__social-item"><a href="https://www.instagram.com/abbie_cookson/" class="footer__social-ink" target="_blank"><img class="footer__social-icon" src='img/social__instagram.svg' /></a></li>
+                <li class="footer__social-item"><a href="https://twitter.com/abbie_cookson" class="footer__social-link" target="_blank"><img class="footer__social-icon" src='img/social__twitter.svg' /></a></li>
+            </ul>
         </div>
         <script src="js/functions.js"></script>
     </body>
