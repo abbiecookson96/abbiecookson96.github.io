@@ -84,15 +84,16 @@ body {
   text-align: center;
   font-family: pt sans narrow, verdana;
   font-size: 24px;
-  margin: 0 30px 30px 30px;
   padding-top: 30px;
+  width: 60%;
+  margin: 0 auto 50px auto;
 }
 .about__tagline {
   font-weight: bold;
   margin-top: 0px;
 }
-.about__role {
-  margin-bottom: 100px;
+.about__text {
+  font-size: 18px;
 }
 .separator {
   width: 40px;
