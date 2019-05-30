@@ -31,7 +31,7 @@ body {
 .header__nav-link {
   display: block;
   padding: 15px;
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
 }
 .header__nav-link:hover {
@@ -184,7 +184,7 @@ body {
   top: 15%;
   background: rgba(173, 5, 74, 0.95);
   text-align: center;
-  color: #ffffff;
+  color: #fff;
   font-family: pt sans narrow, verdana;
   padding: 15px;
   font-size: 18px;
