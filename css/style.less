@@ -50,37 +50,37 @@ body.safari .hero {
     }
 }
 
-.header {
-    overflow: hidden;
-    position: absolute;
-    z-index: @header-z-index;
-    top: @base-padding;
-    right: @base-padding;
-    font-family: @base-font-family;
-    font-size: @base-font-size;
+// .header {
+//     overflow: hidden;
+//     position: absolute;
+//     z-index: @header-z-index;
+//     top: @base-padding;
+//     right: @base-padding;
+//     font-family: @base-font-family;
+//     font-size: @base-font-size;
 
-    &__nav {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-    }
+//     &__nav {
+//         list-style-type: none;
+//         margin: 0;
+//         padding: 0;
+//         overflow: hidden;
+//     }
 
-    &__nav-item {
-        float: left;
-    }
+//     &__nav-item {
+//         float: left;
+//     }
 
-    &__nav-link {
-        display: block;
-        padding: @base-padding;
-        color: @white;
-        text-decoration: none;
+//     &__nav-link {
+//         display: block;
+//         padding: @base-padding;
+//         color: @white;
+//         text-decoration: none;
 
-        &:hover {
-            color: pink;
-        }
-    }
-}
+//         &:hover {
+//             color: pink;
+//         }
+//     }
+// }
 
 .hero {
     width: @full-width;
@@ -96,18 +96,26 @@ body.safari .hero {
         background-position: center;
     }
 
-    &__img {
+    &__text {
         position: absolute;
         width: 40%;
         top: 40%;
         left: 50%;
         transform: translate(-50%);
         z-index: @hero-image-z-index;
-        opacity: 0.8;
+        font-size: @base-font-size;
+        font-family: @base-font-family;
+        color: @white;
+        margin-bottom: 5px;
+        text-align: center;
+    }
 
-        @media @for-tablet-down {
-            width: 80%;
-        }
+    &__message {
+        font-size: @base-font-size * 2;
+    }
+
+    &__info {
+        font-size: 20px;
     }
 
     &__chevron {
@@ -138,10 +146,6 @@ body.safari .hero {
     &__tagline {
         font-weight: bold;
         margin-top: 0px;
-    }
-
-    &__text {
-        font-size: @base-font-size;
     }
 }
 
