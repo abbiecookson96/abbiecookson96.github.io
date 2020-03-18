@@ -18,6 +18,8 @@
 
 // Media Queries
 
+@for-small-mobile-down: ~"(max-width: 360px)";
+
 @for-tablet-down: ~"(max-width: 768px)";
 @for-desktop-down: ~"(max-width: 824px)";
 
@@ -338,6 +340,10 @@ body.safari .hero {
         display: inline-block;
         width: 25px;
         margin: 0 @base-margin;
+
+        @media @for-small-mobile-down {
+            width: 20px;
+        }
     }
 
     &__social-link {

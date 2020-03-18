@@ -249,6 +249,11 @@ body {
   width: 25px;
   margin: 0 15px;
 }
+@media (max-width: 360px) {
+  .footer__social-item {
+    width: 20px;
+  }
+}
 .footer__social-link {
   display: block;
 }
