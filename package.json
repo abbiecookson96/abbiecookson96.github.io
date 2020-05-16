@@ -9,7 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ecstatic": "^3.3.2",
     "less": "^3.11.1",
     "minimist": ">=1.2.3",
     "qs": ">=6.0.4"
